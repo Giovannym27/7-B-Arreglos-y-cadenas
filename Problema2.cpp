@@ -13,7 +13,24 @@ int main() {
             string palabra;
             cin >> palabra;
             
+            int inicio = 0;
+            int fin = palabra.length() - 1;
+            bool esPalindromo = true;
             
+            while (inicio < fin) {
+                if (palabra[inicio] != palabra[fin]) {
+                    esPalindromo = false;
+                    break; 
+                }
+                inicio++;
+                fin--;
+            }
+            
+            if (esPalindromo) {
+                cout << "P\n";
+            } else {
+                cout << "NP\n";
+            }
             
         }
     }
